@@ -95,7 +95,23 @@ ADD-0.1d metric: a prediction is correct if the mean per-point 3D distance betwe
 | **Extension** (YOLOv11-seg + RGBD Fusion + PoseRefineNet) | 91.6% |
 | DenseFusion (reference) | 94.0% |
 
-<!-- TODO: Add per-object breakdown table for Extension pipeline (Table 2 from paper) -->
+| Object    | Acc (0.1d) | Acc (2cm) | Err (mm) |
+|-----------|------------|-----------|----------|
+| Ape       | 91.5%      | 97.3%     | 8.4      |
+| Bench     | 97.1%      | 82.4%     | 14.2     |
+| Cam       | 67.7%      | 62.1%     | 19.8     |
+| Can       | 86.8%      | 70.9%     | 17.4     |
+| Cat       | 97.5%      | 98.8%     | 8.0      |
+| Drill     | 94.6%      | 78.0%     | 16.0     |
+| Duck      | 94.4%      | 98.0%     | 8.6      |
+| Egg*      | 100.0%     | 100.0%    | 4.0      |
+| Glue*     | 99.6%      | 99.6%     | 4.5      |
+| Hole      | 85.0%      | 91.9%     | 11.1     |
+| Iron      | 86.1%      | 63.0%     | 19.4     |
+| Lamp      | 100.0%     | 91.7%     | 12.0     |
+| Phone     | 89.2%      | 75.3%     | 15.3     |
+| **AVG**   | **91.6%**  | **85.6%** | **12.1** |
+*Symmetric objects (ADD-S metric)
 
 ---
 
@@ -259,13 +275,12 @@ python scripts/extension/pipeline_inference.py \
 
 ## Citation
 
-<!-- TODO: Replace with the actual BibTeX entry once the paper has a formal reference (e.g., arXiv ID or course proceedings citation) -->
 ```bibtex
 @techreport{palmisani2025pose,
-  title     = {Enhancing 6D Object Pose Estimation with RGB-D Global Fusion},
-  author    = {Palmisani, Francesco and Pinto, Giosu{\`e} and Marconi, Riccardo and Reale, Samuele},
+  title     = {6D Object Pose Estimation},
+  author    = {Palmisani, Francesco and Pinto, Giosu{\`e} 
+               and Marconi, Riccardo and Reale, Samuele},
   institution = {Politecnico di Torino},
-  year      = {2025},
-  note      = {Advanced Machine Learning course project}
+  year      = {2025}
 }
 ```
