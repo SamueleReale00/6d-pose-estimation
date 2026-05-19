@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+.venv/
+env/
+
+# Model checkpoints and weights
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+
+# Dataset / data directories
+data/
+datasets/
+*.zip
+
+# Experiment tracking
+wandb/
+
+# Team reference clone
+team_repo/
+
+# macOS
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
